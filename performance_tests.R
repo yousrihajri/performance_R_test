@@ -1,21 +1,18 @@
-library(readit)
+
 library(tidyverse)
 options(scipen = 999, digits = 2)
 
 
 #### DATA PREPARATION ####
 ##########################
-setwd (dir = "C:\\Users\\yousri.hajri\\Documents\\DATA_SCIENCE\\R_LIBRARY\\DATA")
-#data_08_2017 <- readit("https://s3.amazonaws.com/nyc-tlc/trip+data/yellow_tripdata_2017-08.csv")
-#data_09_2017 <- readit("https://s3.amazonaws.com/nyc-tlc/trip+data/yellow_tripdata_2017-09.csv")
-#data_10_2017 <- readit("https://s3.amazonaws.com/nyc-tlc/trip+data/yellow_tripdata_2017-10.csv")
-#data_11_2017 <- readit("https://s3.amazonaws.com/nyc-tlc/trip+data/yellow_tripdata_2017-11.csv")
-#data_12_2017 <- readit("https://s3.amazonaws.com/nyc-tlc/trip+data/yellow_tripdata_2017-12.csv")
-#data_brut <- rbind(data_08_2017, data_09_2017, data_10_2017, data_11_2017, data_12_2017) 
-#remove(data_08_2017, data_09_2017, data_10_2017, data_11_2017, data_12_2017)
-#write_csv(data_brut, "data_brut.csv")
-data_brut <- readit("data_brut.csv")
 
+data_08_2017 <- readit("https://s3.amazonaws.com/nyc-tlc/trip+data/yellow_tripdata_2017-08.csv")
+data_09_2017 <- readit("https://s3.amazonaws.com/nyc-tlc/trip+data/yellow_tripdata_2017-09.csv")
+data_10_2017 <- readit("https://s3.amazonaws.com/nyc-tlc/trip+data/yellow_tripdata_2017-10.csv")
+data_11_2017 <- readit("https://s3.amazonaws.com/nyc-tlc/trip+data/yellow_tripdata_2017-11.csv")
+data_12_2017 <- readit("https://s3.amazonaws.com/nyc-tlc/trip+data/yellow_tripdata_2017-12.csv")
+data_brut <- rbind(data_08_2017, data_09_2017, data_10_2017, data_11_2017, data_12_2017) 
+remove(data_08_2017, data_09_2017, data_10_2017, data_11_2017, data_12_2017)
 
 #Prepare XDF
 
@@ -74,7 +71,7 @@ df <- as.data.frame(0)
 #Take data by a million row addition at a time in a for loop
 for (i in 1:45) {
   
-  print(paste("iteration n°",i))
+  print(paste("iteration nÂ°",i))
   print(paste("number of rows ",i*1000000))
 
   
